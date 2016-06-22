@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+struct node
+{
+    int data;
+    node* next;
+};
+
+int main()
+{
+    //////////  Welcome //////////////////////////////
+    cout << "*********************************" << endl;
+    cout << "           Program Start" << endl;
+    cout << "*********************************" << endl;
+
+//////////////////////////////////////////////////////
+
+//node* next;
+node* temp;
+node *head;
+////////////////////////////////////////////////////////
+
+head = new node;        // First
+head->data = 10;
+head->next = 0;
+
+temp = head;            // Conductor
+
+
+
+    cout << "First:  " << temp->data << endl;
+
+temp->next = new node;   // Second
+temp = temp->next;
+temp->data = 20;
+temp->next = 0;
+
+    cout << "Second:  " << temp->data << endl;
+
+temp->next = new node;   // Third
+temp = temp->next;
+temp->data = 30;
+temp->next = 0;
+
+    cout << "Third:  " << temp->data << endl;
+
+temp->next = new node;   // Forth
+temp = temp->next;
+temp->data = 40;
+temp->next = 0;
+
+    cout << "Forth:  " << temp->data << endl;
+
+/////////////////// Run /////////////////////////////////
+temp = head;
+
+while(temp != NULL)
+    {
+        cout << endl << temp->data << endl;
+        temp = temp->next;
+        cin.get();
+    }
+////////////////////////////////////////////////////////
+
+    cin.get();
+
+    return 0;
+}
